@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="main">
+        <h1>Welcome to Promise</h1>
+        <h2>Country Name Search</h2>
+        <input #term type="text" (keyup)="search(term.value)">
+        <div *ngIf="results.length > 0">
+            <li class="list" *ngFor="let value of results, index as i">
+                {{results[i].name}}
+            </li>
+        </div>
+    </div>
+</div>

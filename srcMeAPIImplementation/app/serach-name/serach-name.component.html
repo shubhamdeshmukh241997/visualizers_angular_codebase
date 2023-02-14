@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="header">
+        <h1>Get SerachName API Implementation</h1>
+    </div>
+    <section>
+        <button class="btn btn-primary" (click)="clickMe()">Get Data</button>
+        <hr>
+    </section>
+    <div class="table" *ngIf="userdata">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ userdata.id }}</td>
+                    <td>{{ userdata.name }}</td>
+                    <td>{{ userdata.email }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

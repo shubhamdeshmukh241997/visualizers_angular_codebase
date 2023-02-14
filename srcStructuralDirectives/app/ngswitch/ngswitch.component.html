@@ -1,0 +1,12 @@
+<div class="hero">
+    <h4>ngSwitch Demo</h4>
+    
+    <div [ngSwitch]="tech">
+        <div *ngSwitchCase="'Angular'">You select Angular tech</div>
+        <div *ngSwitchCase="'Python'">You select Python tech</div>
+        <div *ngSwitchCase="'Postgresql'">You select Postgresql tech</div>
+        <div *ngSwitchCase="'React'">You select React tech</div>
+
+        <div *ngSwitchDefault>Wrong Selection</div>
+    </div>
+</div>

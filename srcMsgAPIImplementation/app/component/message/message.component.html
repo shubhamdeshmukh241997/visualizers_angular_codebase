@@ -1,0 +1,38 @@
+<!-- <li *ngFor="let msg of messages.messagetdreads">
+    <span>{{msg.id}} </span>
+  </li>
+   -->
+
+<div class="container">
+  <div class="header">
+    <h1>Get Message API Implementation</h1>
+  </div>
+  <div class="table" *ngIf="messages">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>ID</th>
+          <th>WebURL</th>
+          <!-- <th>Participants</th>
+          <th>LastMessage</th> -->
+          <th>HasUnreadMessages</th>
+          <th>HasPriorityMessages</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let msg of messages.messageThreads">
+          <td> {{ msg.name }} </td>
+          <td> {{ msg.id}} </td>
+          <td> {{ msg.webUrl }} </td>
+          <!-- <td> {{msg.participants }} </td>
+          <td> {{ msg.lastMessage }} </td> -->
+          <td> {{ msg.hasUnreadMessages }} </td>
+          <td> {{ msg.hasPriorityMessages }} </td>
+          <td> {{ msg.type }} </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>   

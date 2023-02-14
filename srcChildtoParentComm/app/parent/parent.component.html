@@ -1,0 +1,7 @@
+
+<div style="text-align: center;">
+    <h1>Welcome to Parent to Child Communication</h1>
+    <!-- Bind the event with conatiner -->
+    <app-child (MyEvent) = "Message = $event"></app-child>
+    <h2>Data from Child: {{Message}}</h2>
+</div>

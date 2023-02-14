@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.container{
+    background-color: goldenrod;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 24px;
+}
+
+a{
+    text-decoration: none;
+}

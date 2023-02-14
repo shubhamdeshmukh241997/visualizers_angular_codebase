@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="main">
+        <h2>Welcome to Observables</h2>
+        <h3>Country Name Search</h3>
+        <input [formControl] = "term">
+        <hr>
+        <div *ngIf="results.length > 0">
+            <div *ngFor="let value of results, index as i">
+                <li class="list">{{ results[i].name}}</li>
+                {{results[i].capital}}
+            </div>
+        </div>
+    </div>
+</div>
