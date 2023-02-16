@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="header">
+        <h1>Search Name API Implementation</h1>
+        <h3>Search Name</h3>
+    </div>
+    <div class="main">
+        <h4>Name</h4>
+        <input [formControl]="term">
+        <hr>
+        <h4>Top</h4>
+        <input [formControl]="top">
+        <hr>
+        <h4>Skip</h4>
+        <input [formControl]="skip">
+        <hr>
+    </div>
+    <hr>
+        <button class="btn btn-dark" (click)="getNameResponse()">Search</button>
+        <hr>
+        <div class="grid-container" *ngIf="results">
+            <div *ngFor="let value of results.users">
+                <div class="grid-item">{{ value.id }} {{ value.name }} {{ value.email }}  {{ value.jobTitle}}</div>
+            </div>
+        </div>
+    </div>

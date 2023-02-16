@@ -20,24 +20,24 @@ export class MessageComponent {
   ngOnInit(){
     this.messageservice.getMessages().subscribe((response:Messages) => {
       console.log(response);
-      this.messages.messageThreads = response?.messageThreads?.map((item) => {
-        var mt = {} as MessageThread;
-        mt.name = item?.name;
-        mt.id = item?.id;
-        mt.webUrl = item?.webUrl;
-        mt.participants = item?.participants;
-        // mt.participants = item?.participants?.map((item) => {
-        //   var p = {} as Participant;
-        //   p.id = item?.id;
-        //   p.name = item?.name;
-        //   p.email = item?.email;
-        // })
-        mt.lastMessage = item?.lastMessage;
-        mt.hasUnreadMessages = item?.hasUnreadMessages;
-        mt.hasPriorityMessages = item?.hasPriorityMessages;
-        mt.type = item?.type;
-        return mt;
-      })
+		  this.messages.messageThreads = response?.messageThreads?.map((item) => {
+			var mt = {} as MessageThread;
+			mt.name = item?.name;
+			mt.id = item?.id;
+			mt.webUrl = item?.webUrl;
+			mt.participants = item?.participants;
+			// mt.participants = item?.participants?.map((item) => {
+			//   var p = {} as Participant;
+			//   p.id = item?.id;
+			//   p.name = item?.name;
+			//   p.email = item?.email;
+			// })
+			mt.lastMessage = item?.lastMessage;
+			mt.hasUnreadMessages = item?.hasUnreadMessages;
+			mt.hasPriorityMessages = item?.hasPriorityMessages;
+			mt.type = item?.type;
+			return mt;
+		  })
     })
   }
 
