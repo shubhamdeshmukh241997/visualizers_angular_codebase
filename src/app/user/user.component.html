@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="main">
+        <h1>Search String API Implementation</h1>
+        <h3>Search string</h3>
+        <input [formControl] = "term">
+        <hr>
+        <button (click)="getSearchResponse()">Search</button>
+        <table *ngIf="results">
+
+            <div *ngFor="let value of results.messageThreads">
+                <li class="list">{{ value.lastMessage.userName }}</li>
+            </div>
+        </table>
+    </div>
+</div>
