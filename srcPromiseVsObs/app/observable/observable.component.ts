@@ -17,7 +17,7 @@ export class ObservableComponent {
 
   ngOnInit(){
     this.term.valueChanges
-    .pipe(debounceTime(0),distinctUntilChanged())
+    .pipe(debounceTime(2000),distinctUntilChanged())
     .subscribe((searchterm:any) => {
       this._http.get(`https://restcountries.com/v2/name/${searchterm}`).subscribe((data : any) => {
         console.time('request-length');

@@ -1,0 +1,145 @@
+@mixin heading-font {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    line-height: 17px;
+}
+
+
+.inbox-list {
+    margin-left: 5%;
+    width: 404px;
+    height: 100vh;
+    border: 1px solid #C1CDD7;
+    position: relative;
+    left: 25px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly
+}
+
+.header-item {
+    @include heading-font();
+    font-weight: 400;
+    font-size: 17px;
+    color: #32414E;
+    // border: 1px solid red;
+    background: #FFFFFF;
+    width: 204px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    box-shadow: inset 0px -1px 0px #C1CDD7;
+}
+
+.header-item1 {
+    @include heading-font();
+    font-weight: 600;
+    color: #3453A8;
+    box-shadow: inset 0px -2px 0px #3453A8;
+    width: 204px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+}
+
+.pinned-msg p {
+    @include heading-font();
+    font-weight: 400;
+    font-size: 14px;
+    width: 117px;
+    height: 17px;
+    margin-top: 16px;
+    margin-left: 10px;
+    margin-bottom: 8px;
+    color: #516576;
+    // border: 1px solid red;
+}
+
+// Message Row
+.message-area {
+    display: flex;
+    justify-content: center;
+    // border: 1px solid red;
+    width: 402px;
+    height: 110px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 25px;
+    background: #FAFAFF;
+    border-bottom: 1px solid #C1CDD7;
+
+}
+
+.profile {
+    // border: 1px solid red;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.profile-item svg {
+    color: white;
+}
+
+
+.profile img {
+    height: 24px;
+    width: 27px;
+    padding-left: 4px;
+}
+
+.msg {
+    // border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    padding-left: 8px;
+}
+
+.msg-name {
+    @include heading-font();
+    font-weight: 400;
+    font-size: 17px;
+    color: #182834;
+}
+
+.msg-msg {
+    @include heading-font();
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.msg-msg1,
+.msg-time1 {
+    @include heading-font();
+    font-weight: 400;
+    font-size: 14px;
+    font-weight: 600;
+    color: #5770CB;
+}
+
+.msg-time {
+    @include heading-font();
+    font-weight: 400;
+    font-size: 14px;
+}
+
+
+.msg-preview-text {
+    @include heading-font();
+    font-weight: 400;
+    font-size: 14px;
+    color: #516576;
+}
+
+.pin {
+    padding-left: 8px;
+    width: 14px;
+    // border: 1px solid red;
+}
